@@ -1,7 +1,3 @@
----
-slug: /api/geocoding-service
----
-
 # Geocoding Service
 
 Dịch vụ Geocoding API hỗ trợ:

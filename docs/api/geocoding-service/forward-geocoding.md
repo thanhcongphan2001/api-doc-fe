@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1
 description: Chuyển đổi địa chỉ hoặc mô tả vị trí thành tọa độ địa lý (kinh độ, vĩ độ).
 ---
 
@@ -10,21 +9,21 @@ description: Chuyển đổi địa chỉ hoặc mô tả vị trí thành tọa
 
 **Phương thức**: `GET`
 
-**URL**: `https://maps.ots.vn/api-web/geocode/v1/search`
+**URL**: `https://maps.ots.vn/api/v1/search`
 
 **Tham số**:
 
-| Tham số           | Mô tả                                       | Ví dụ                 |
-|-------------------|---------------------------------------------|-----------------------|
-| `size`            | Số lượng kết quả trả về trong một truy vấn. | `20`                  |
-| `text`            | Chuỗi tìm kiếm để tra cứu địa chỉ.          | `47a phạm viết chánh` |
-| `focus.point.lat` | Vĩ độ của điểm cần tập trung.               | `10.7752858785`       |
-| `focus.point.lon` | Kinh độ của điểm cần tập trung.             | `106.69969573162079`  |
+| Tham số           | Mô tả                                                                          | Yêu cầu | Ví dụ                 |
+|-------------------|--------------------------------------------------------------------------------|:-------:|-----------------------|
+| `text`            | Chuỗi tìm kiếm để tra cứu địa chỉ.                                             |    ✅    | `47a phạm viết chánh` |
+| `size`            | Số lượng kết quả trả về trong một truy vấn nếu không truyền mặc định sẽ là 10. |         | `20`                  |
+| `focus.point.lat` | Vĩ độ của điểm cần tập trung.                                                  |         | `10.7752858785`       |
+| `focus.point.lon` | Kinh độ của điểm cần tập trung.                                                |         | `106.69969573162079`  |
 
 **Ví dụ**:
 
 ```http
-https://maps.ots.vn/api-web/geocode/v1/search?size=1&text=47a%20ph%E1%BA%A1m%20vi%E1%BA%BFt%20ch%C3%A1nh&focus.point.lat=10.7752858785&focus.point.lon=106.69969573162079
+https://maps.ots.vn/api/v1/search?size=1&text=47a%20ph%E1%BA%A1m%20vi%E1%BA%BFt%20ch%C3%A1nh&focus.point.lat=10.7752858785&focus.point.lon=106.69969573162079&apikey={YOUR_API_KEY}
 ```
 
 **Response**:

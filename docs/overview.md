@@ -1,19 +1,27 @@
 # Overview
 
-You have just learned the **basics of Docusaurus** and made some changes to the **initial template**.
+:::info
 
-Docusaurus has **much more to offer**!
+Để sử dụng bất kỳ API nào của GTEL MAPS, bạn sẽ cần khóa API. Hãy liên hệ với chúng tôi để được cấp khóa API và sử
+dụng.
 
-Have **5 more minutes**? Take a look at **[versioning](../tutorial-extras/manage-docs-versions.md)** and **[i18n](../tutorial-extras/translate-your-site.md)**.
+:::
 
-Anything **unclear** or **buggy** in this tutorial? [Please report it!](https://github.com/facebook/docusaurus/discussions/4610)
+## Giới thiệu
 
-## What's next?
+**Maps APIs** cung cấp các dịch vụ bản đồ kỹ thuật số toàn diện, bao gồm Bản đồ nền, Mã hóa địa lý (
+Geocoding ),
+Điều hướng và Dịch vụ vị trí để hỗ trợ các nhu cầu đa dạng từ cá nhân, doanh nghiệp đến cơ quan chính phủ.
 
--   Read the [official documentation](https://docusaurus.io/)
--   Modify your site configuration with [`docusaurus.config.js`](https://docusaurus.io/docs/api/docusaurus-config)
--   Add navbar and footer items with [`themeConfig`](https://docusaurus.io/docs/api/themes/configuration)
--   Add a custom [Design and Layout](https://docusaurus.io/docs/styling-layout)
--   Add a [search bar](https://docusaurus.io/docs/search)
--   Find inspirations in the [Docusaurus showcase](https://docusaurus.io/showcase)
--   Get involved in the [Docusaurus Community](https://docusaurus.io/community/support)
+**Maps APIs** cung cấp cho bạn các API có sẵn bao gồm:
+
+- **Dịch vụ Bản đồ (Maps Service):** Cung cấp bản đồ dạng raster và vector, hỗ trợ hiển thị linh hoạt cho các nền tảng
+  web và mobile.
+- **Dịch vụ Geocoding:** Chuyển đổi giữa địa chỉ và tọa độ để hỗ trợ tìm kiếm vị trí chính xác.
+- **Dịch vụ Điều hướng (Navigation Service):** Tính toán lộ trình tối ưu với hỗ trợ nhiều phương tiện di chuyển.
+- **Dịch vụ Vị trí (Location Service):** Cung cấp thông tin về địa giới hành chính và các khu vực liên quan.
+
+## Tài liệu này dành cho ai
+
+Tài liệu này được thiết kế cho những người đã quen với các khái niệm về Rest API, giúp bạn nhanh chóng bắt đầu khám phá
+và xây dựng ứng dụng bản đồ với GTEL MAPS.

@@ -43,7 +43,7 @@ const sidebars: SidebarsConfig = {
 			collapsed: false,
 			link: {
 				type: 'doc',
-				id: 'api/geocoding-service/index',
+				id: 'api/navigation-service/index',
 			},
 			items: ['api/navigation-service/route-api']
 		},
@@ -53,7 +53,7 @@ const sidebars: SidebarsConfig = {
 			collapsed: false,
 			link: {
 				type: 'doc',
-				id: 'api/geocoding-service/index',
+				id: 'api/location-service/index',
 			},
 			items: ['api/location-service/administrative-api']
 		}

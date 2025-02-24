@@ -1,36 +1,37 @@
 ---
-sidebar_position: 1
-description: Gợi ý vị trí theo thời gian thực khi người dùng nhập thông tin tìm kiếm.
+description: Cung cấp bản đồ dạng raster theo các cấp độ thu phóng khác nhau, giúp hiển thị nhanh chóng trên web và mobile. Dữ liệu được cung cấp dưới dạng hình ảnh PNG.
 ---
 
 # Raster Tiles
 
-Vector Tiles API cung cấp các ô Vector theo đặc tả Mapbox Vector Tile, eKMap Platform cung cấp dịch vụ Vector Tiles cho các dịch vụ bản đồ như Bản đồ eKMap (nguồn dữ liệu OpenStreetMaps), Bản đồ eKMap Chi tiết (CityMap), Bản đồ eKMap hành chính (BDM) (địa phận, ranh giới, tên đơn vị hành chính)
-
-## Retrieve vector tiles {#Retrieve vector tiles}
-
-**Mô tả**: Bản đồ eKMap dạng Raster Tile, một lựa chọn khác của Bản đồ eKMap Vector Tile. Kích thước từng ô là 256x256
+**Mô tả**: Dịch vụ cung cấp bản đồ dạng raster theo các cấp độ thu phóng khác nhau, giúp hiển thị nhanh chóng trên web và mobile. Dữ liệu được cung cấp dưới dạng hình ảnh PNG.
 
 **Phương thức**: `GET`
 
-**URL**: `https://maps.ots.vn/api-web/tiles/v1/basic/0/0/0/png`
+**URL**: `https://maps.ots.vn/api/v1/tiles/{type}/{z}/{x}/{y}.png`
 
 **Tham số**:
 
-| Tham số     | Mô tả       | Ví dụ                                                                                                                                                                                                     |
-|-------------|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `typesssss` | aaa         | `basic`                                                                                                                                                                                                        |
-| `x`         | `localhost` | Specify a host to use. For example, if you want your server to be accessible externally, you can use `--host 0.0.0.0`.                                                                                    |
-| `y`         |             | Specify site locale to be used.                                                                                                                                                                           |
-| `z`         | `false`     | Enables Hot Module Replacement without page refresh as a fallback in case of build failures. More information [here](https://webpack.js.org/configuration/dev-server/#devserverhotonly).                  |
-                                                                                                                                                       
+| Tham số | Mô tả                                                                                   | Yêu cầu | Ví dụ   |
+|---------|-----------------------------------------------------------------------------------------|:-------:|---------|
+| `type`  | Giá trị bao gồm: `basic` - Cơ bản, `dark` - Đêm, `streets` - Đường phố, `light` - Sáng. |    ✅    | `basic` |
+| `x`     | Ô trục X                                                                                |    ✅    | `0`     |
+| `y`     | Ô trục Y                                                                                |    ✅    | `0`     |
+| `z`     | Mức hiển thị                                                                            |    ✅    | `0`     |
+
 **Ví dụ**:
+
 ```http
-https://maps.ots.vn/api-web/tiles/v1/basic/8/198/123.png
+https://maps.ots.vn/api/v1/tiles/basic/0/0/0/png?apikey={YOUR_API_KEY}
 ```
+
 **Response**:
 
 Dịch vụ trả về ảnh kích thước 256x256
+
+![My image alternative text](../../assets/geoserver-dispatch.png)
+
+
 
 
 

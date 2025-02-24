@@ -11,7 +11,7 @@ const config: Config = {
 	favicon: 'img/favicon.ico',
 
 	// Set the production url of your site here
-	url: 'https://your-docusaurus-site.example.com',
+	url: 'https://maps-doc.ots.vn',
 	// Set the /<baseUrl>/ pathname under which your site is served
 	// For GitHub pages deployment, it is often '/<projectName>/'
 	baseUrl: '/',
@@ -66,8 +66,13 @@ const config: Config = {
 	themeConfig: {
 		// Replace with your project's social card
 		image: 'img/docusaurus-social-card.jpg',
+		algolia: {
+			appId: 'X1Z85QJPUV',
+			apiKey: 'bf7211c161e8205da2f933a02534105a',
+			indexName: 'docusaurus-2',
+		},
 		navbar: {
-			title: 'GTEL MAP DOCS',
+			title: 'GTEL MAPS Docs',
 			logo: {
 				alt: 'My Site Logo',
 				src: 'img/logo.svg'
@@ -83,19 +88,19 @@ const config: Config = {
 					type: 'docSidebar',
 					position: 'left',
 					sidebarId: 'api',
-					label: 'API',
+					label: 'Maps APIs',
 				},
 				// { to: 'docs/api', label: 'MAPS API', position: 'left' },
-				{
-					href: 'https://github.com/facebook/docusaurus',
-					label: 'GitHub',
-					position: 'right'
-				}
+				// {
+				// 	href: 'https://github.com/facebook/docusaurus',
+				// 	label: 'GitHub',
+				// 	position: 'right'
+				// }
 			]
 		},
 		footer: {
 			style: 'light',
-			copyright: `© 2025 GTEL MAP. Bản quyền thuộc về GTEL MAP`
+			copyright: `© 2025 GTEL MAPS. Bản quyền thuộc về GTEL MAPS`
 		},
 		prism: {
 			theme: prismThemes.github,
