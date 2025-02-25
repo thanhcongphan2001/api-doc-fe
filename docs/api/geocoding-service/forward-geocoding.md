@@ -18,17 +18,17 @@ description: Chuyển đổi địa chỉ hoặc mô tả vị trí thành tọa
 | `text`            | Chuỗi tìm kiếm để tra cứu địa chỉ.                                             |    ✅    | `47a phạm viết chánh` |
 | `size`            | Số lượng kết quả trả về trong một truy vấn nếu không truyền mặc định sẽ là 10. |         | `20`                  |
 | `focus.point.lat` | Vĩ độ của điểm cần tập trung.                                                  |         | `10.7752858785`       |
-| `focus.point.lon` | Kinh độ của điểm cần tập trung.                                                |         | `106.69969573162079`  |
+| `focus.point.lon` | Kinh độ của điểm cần tập trung.                                                |         | `106.699695731`       |
 
 **Ví dụ**:
 
 ```http
-https://maps.ots.vn/api/v1/search?size=1&text=47a%20ph%E1%BA%A1m%20vi%E1%BA%BFt%20ch%C3%A1nh&focus.point.lat=10.7752858785&focus.point.lon=106.69969573162079&apikey={YOUR_API_KEY}
+https://maps.ots.vn/api/v1/search?size=1&text=47a%20ph%E1%BA%A1m%20vi%E1%BA%BFt%20ch%C3%A1nh&focus.point.lat=10.7752858785&focus.point.lon=106.699695731&apikey={YOUR_API_KEY}
 ```
 
 **Response**:
 
-```json title="dữ liệu trả về dạng JSON"
+```json title="Dữ liệu trả về dạng JSON"
 {
   "geocoding": {
     "query": {
@@ -42,7 +42,7 @@ https://maps.ots.vn/api/v1/search?size=1&text=47a%20ph%E1%BA%A1m%20vi%E1%BA%BFt%
       ],
       "private": false,
       "focus.point.lat": 10.7752858785,
-      "focus.point.lon": 106.69969573162079,
+      "focus.point.lon": 106.699695731,
       "lang": {
         "name": "Vietnamese",
         "iso6391": "vi",

@@ -17,17 +17,17 @@ giải thành địa chỉ `47a phạm viết chánh`.
 |-------------|--------------------------------------------------------------------------------|:-------:|----------------------|
 | `size`      | Số lượng kết quả trả về trong một truy vấn nếu không truyền mặc định sẽ là 10. |         | `20`                 |
 | `point.lat` | Vĩ độ của điểm cần tập trung.                                                  |    ✅    | `10.7752858785`      |
-| `point.lon` | Kinh độ của điểm cần tập trung.                                                |    ✅    | `106.69969573162079` |
+| `point.lon` | Kinh độ của điểm cần tập trung.                                                |    ✅    | `106.699695731` |
 
 **Ví dụ**:
 
 ```http
-https://maps.ots.vn/api/v1/reverse?size=1&point.lat=10.766121&point.lon=106.683321&apikey={YOUR_API_KEY}
+https://maps.ots.vn/api/v1/reverse?size=1&point.lat=10.7752858785&point.lon=106.699695731&apikey={YOUR_API_KEY}
 ```
 
 **Response**:
 
-```json title="dữ liệu trả về dạng JSON"
+```json title="Dữ liệu trả về dạng JSON"
 {
   "geocoding": {
     "query": {

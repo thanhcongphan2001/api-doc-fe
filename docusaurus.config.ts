@@ -90,6 +90,12 @@ const config: Config = {
 					sidebarId: 'api',
 					label: 'Maps APIs',
 				},
+				{
+					type: 'docSidebar',
+					position: 'left',
+					sidebarId: 'sdk',
+					label: 'Maps SDKs',
+				},
 				// { to: 'docs/api', label: 'MAPS API', position: 'left' },
 				// {
 				// 	href: 'https://github.com/facebook/docusaurus',

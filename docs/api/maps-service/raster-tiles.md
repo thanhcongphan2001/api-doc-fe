@@ -1,10 +1,11 @@
 ---
-description: Cung cấp bản đồ dạng raster theo các cấp độ thu phóng khác nhau, giúp hiển thị nhanh chóng trên web và mobile. Dữ liệu được cung cấp dưới dạng hình ảnh PNG.
+description: Cung cấp bản đồ dạng raster theo các cấp độ thu phóng khác nhau, giúp hiển thị nhanh chóng trên web và mobile. Dữ liệu được cung cấp dưới dạng hình ảnh PNG hoặc JPEG.
 ---
 
 # Raster Tiles
 
-**Mô tả**: Dịch vụ cung cấp bản đồ dạng raster theo các cấp độ thu phóng khác nhau, giúp hiển thị nhanh chóng trên web và mobile. Dữ liệu được cung cấp dưới dạng hình ảnh PNG.
+**Mô tả**: Dịch vụ cung cấp bản đồ dạng **raster** với nhiều cấp độ thu phóng khác nhau, giúp hiển thị nhanh chóng trên
+web và mobile. Dữ liệu được cung cấp dưới dạng hình ảnh PNG.
 
 **Phương thức**: `GET`
 
@@ -12,12 +13,12 @@ description: Cung cấp bản đồ dạng raster theo các cấp độ thu phó
 
 **Tham số**:
 
-| Tham số | Mô tả                                                                                   | Yêu cầu | Ví dụ   |
-|---------|-----------------------------------------------------------------------------------------|:-------:|---------|
-| `type`  | Giá trị bao gồm: `basic` - Cơ bản, `dark` - Đêm, `streets` - Đường phố, `light` - Sáng. |    ✅    | `basic` |
-| `x`     | Ô trục X                                                                                |    ✅    | `0`     |
-| `y`     | Ô trục Y                                                                                |    ✅    | `0`     |
-| `z`     | Mức hiển thị                                                                            |    ✅    | `0`     |
+| Tham số | Mô tả                                                                                                        | Yêu cầu | Ví dụ   |
+|---------|--------------------------------------------------------------------------------------------------------------|:-------:|---------|
+| `type`  | Giá trị bao gồm:<br/> - `basic`: Cơ bản <br/> - `dark`: Đêm <br/>- `streets`: Đường phố <br/>- `light`: Sáng |    ✅    | `basic` |
+| `x`     | Ô trục X                                                                                                     |    ✅    | `0`     |
+| `y`     | Ô trục Y                                                                                                     |    ✅    | `0`     |
+| `z`     | Mức hiển thị                                                                                                 |    ✅    | `0`     |
 
 **Ví dụ**:
 

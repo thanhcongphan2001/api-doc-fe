@@ -10,134 +10,49 @@ các địa điểm cụ thể
 
 **Phương thức**: `GET`
 
-**URL**: `https://maps.ots.vn/api-gateway/maps/administrative-unit/provinces`
+**URL**: `https://maps.ots.vn/api-gateway/maps/administrative-unit/{level}`
 
 **Tham số**:
 
-| Tham số           | Mô tả                                       | Ví dụ                 |
-|-------------------|---------------------------------------------|-----------------------|
-| `size`            | Số lượng kết quả trả về trong một truy vấn. | `20`                  |
-| `text`            | Chuỗi tìm kiếm để tra cứu địa chỉ.          | `47a phạm viết chánh` |
-| `focus.point.lat` | Vĩ độ của điểm cần tập trung.               | `10.7752858785`       |
-| `focus.point.lon` | Kinh độ của điểm cần tập trung.             | `106.69969573162079`  |
+| Tham số         | Mô tả                                                                                                                   | Yêu cầu | Ví dụ                  |
+|-----------------|-------------------------------------------------------------------------------------------------------------------------|---------|------------------------|
+| `level`         | Cấp hành chính:<br/> - `provinces`: Cấp Tỉnh/Thành phố<br/> - `districts`: Cấp Quận/Huyện<br/> - `wards`: Cấp Phường/Xã | ✅       | `provinces`            |
+| `province_code` | Mã định danh của Tỉnh/Thành phố.                                                                                        | ✅       | `01`                   |
+| `district_code` | Mã định danh của Quận/Huyện.                                                                                            | ✅       | `001`                  |
+| `fields`        | Danh sách các trường thông tin cần lấy, cách nhau bằng dấu phẩy.                                                        |         | `prov_code,prov_fname` |
 
-**Ví dụ**:
+**Ví dụ truy vấn danh mục hành chính cấp Tỉnh/Thành phố:** :
 
 ```http
-https://maps.ots.vn/api-web/geocode/v1/search?size=1&text=47a%20ph%E1%BA%A1m%20vi%E1%BA%BFt%20ch%C3%A1nh&focus.point.lat=10.7752858785&focus.point.lon=106.69969573162079
+https://maps.ots.vn/api-gateway/maps/administrative-unit/provinces?fields=prov_code,prov_fname&apikey={YOUR_API_KEY}
+```
+
+**Ví dụ truy vấn danh mục hành chính cấp Quận/Huyện:** :
+
+```http
+https://maps.ots.vn/api-gateway/maps/administrative-unit/districts?province_code=01&fields=dist_code,dist_fname&apikey={YOUR_API_KEY}
+```
+
+**Ví dụ truy vấn danh mục hành chính cấp Phường/Xã:** :
+
+```http
+https://maps.ots.vn/api-gateway/maps/administrative-unit/wards?district_code=001&fields=ward_code,ward_fname&apikey={YOUR_API_KEY}
 ```
 
 **Response**:
 
-```json title="dữ liệu trả về dạng JSON"
+```json title="Dữ liệu trả về dạng JSON"
 {
-  "geocoding": {
-    "query": {
-      "text": "47a phạm viết chánh",
-      "size": 1,
-      "layers": [
-        "address"
-      ],
-      "sources": [
-        "gm"
-      ],
-      "private": false,
-      "focus.point.lat": 10.7752858785,
-      "focus.point.lon": 106.69969573162079,
-      "lang": {
-        "name": "Vietnamese",
-        "iso6391": "vi",
-        "iso6393": "vie",
-        "via": "querystring",
-        "defaulted": false
-      },
-      "querySize": 20,
-      "parser": "pelias",
-      "parsed_text": {
-        "subject": "47a phạm viết chánh"
-      }
-    }
-  },
-  "type": "FeatureCollection",
-  "features": [
+  "statusCode": 200,
+  "data": [
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          106.683321,
-          10.766121
-        ]
-      },
-      "properties": {
-        "id": "9687e238-a5c3-45bb-8255-b56a529430c5",
-        "gid": "gm:address:9687e238-a5c3-45bb-8255-b56a529430c5",
-        "layer": "address",
-        "source": "gm",
-        "source_id": "9687e238-a5c3-45bb-8255-b56a529430c5",
-        "name": "47A Đ. Phạm Viết Chánh",
-        "confidence": 1,
-        "match_type": "exact",
-        "distance": 2.061,
-        "accuracy": "point",
-        "country": "Việt Nam",
-        "region": "Thành phố Hồ Chí Minh",
-        "county": "Quận 1",
-        "localadmin": "Phường Nguyễn Cư Trinh",
-        "locality": "Phường Nguyễn Cư Trinh",
-        "address": "47A Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, Thành phố Hồ Chí Minh, Việt Nam",
-        "address_components": [
-          {
-            "types": [
-              "housenumber"
-            ],
-            "name": "47A"
-          },
-          {
-            "types": [
-              "street"
-            ],
-            "name": "Phạm Viết Chánh"
-          },
-          {
-            "types": [
-              "admin_level_4"
-            ],
-            "name": "Phường Nguyễn Cư Trinh"
-          },
-          {
-            "types": [
-              "admin_level_3"
-            ],
-            "name": "Quận 1"
-          },
-          {
-            "types": [
-              "admin_level_2"
-            ],
-            "name": "Thành phố Hồ Chí Minh"
-          },
-          {
-            "types": [
-              "admin_level_1"
-            ],
-            "name": "Việt Nam"
-          }
-        ],
-        "plus_code": "7P28QM8M+C8",
-        "region_code": "79",
-        "county_code": "760",
-        "locality_code": "26758",
-        "localadmin_code": "26758"
-      }
+      "prov_code": "01",
+      "prov_fname": "Thành phố Hà Nội",
+      "prov_fne": "Ha Noi City"
+    },
+    {
+      "...": "Còn nhiều dữ liệu"
     }
-  ],
-  "bbox": [
-    106.683321,
-    10.766121,
-    106.683321,
-    10.766121
-  ],
-  "licence": "GTEL MAPS"
+  ]
 }
 ```
